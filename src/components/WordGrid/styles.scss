@@ -2,15 +2,34 @@
   .word {
     display: flex;
     flex-direction: row;
+    gap: 8px;
     justify-content: center;
 
     .letter {
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
       align-items: center;
       border: 1px solid white;
+      color: #FFF;
+      display: flex;
+      height: 50px;
+      justify-content: center;
+      margin-bottom: 8px;
+      width: 50px;
+      font-weight: 700;
+
+      &.gray {
+        background-color: #DDDDDD;
+        color: #000000;
+      }
+
+      &.yellow {
+        background-color: #ebca71;
+        color: #000000;
+      }
+
+      &.green {
+        background-color: #92f081;
+        color: #000000;
+      }
     }
   }
 }

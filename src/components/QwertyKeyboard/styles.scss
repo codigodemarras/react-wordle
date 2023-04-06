@@ -1,0 +1,25 @@
+.qwerty {
+  margin-top: 20px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    button {
+      width: 55px;
+      height: 50px;
+      margin-bottom: 4px;
+      cursor: pointer;
+
+      &.backspace {
+        width: 65px;
+      }
+
+      &.enter {
+        width: 104px;
+      }
+    }
+  }
+}
