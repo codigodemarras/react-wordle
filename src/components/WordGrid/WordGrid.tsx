@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import "./styles.scss";
 import { QwertyKeyboard } from "../QwertyKeyboard";
+import { WORDS } from "../../constants";
+import { WinnerModal } from "../WinnerModal";
 
 type LetterStatus = "yellow" | "gray" | "green" | null;
 
@@ -37,9 +39,15 @@ function WordGrid() {
       status: null,
     }),
   ]);
-  const [positionX, setPositionX] = useState(() => 0);
-  const [positionY, setPositionY] = useState(() => 0);
-  const [wordOfTheDay, setWordOfTheDay] = useState(["a", "v", "i", "o", "n"]);
+  const [positionX, setPositionX] = useState<number>(() => 0);
+  const [positionY, setPositionY] = useState<number>(() => 0);
+  const [wordOfTheDay] = useState<string[]>(() =>
+    WORDS[Math.floor(Math.random() * WORDS.length - 1)].split("")
+  );
+  const [grayLetters, setGrayLetters] = useState<string[]>([]);
+  const [yellowLetters, setYellowLetters] = useState<string[]>([]);
+  const [greenLetters, setGreenLetters] = useState<string[]>([]);
+  const [winner, setWinner] = useState<boolean>(false);
 
   const updateLetters = (value: string): void => {
     if (positionX === 5) {
@@ -75,7 +83,6 @@ function WordGrid() {
 
   const sendWord = (): void => {
     if (positionX < 5) {
-      alert("pablabra incompleta");
       return;
     }
 
@@ -85,20 +92,38 @@ function WordGrid() {
       let letterStatus: LetterStatus;
 
       // Exist the letter in the word of the day?
-      const letterExist = wordOfTheDay.indexOf(letter?.value.toLocaleLowerCase());
+      const letterExist = wordOfTheDay.indexOf(letter?.value);
 
       if (letterExist !== -1) {
         // If the letter is equal
-        if (letter?.value.toLocaleLowerCase() === wordOfTheDay[index]) {
+        if (letter?.value === wordOfTheDay[index]) {
           letterStatus = "green";
           wordStatus.push("green");
+
+          setGreenLetters((prevState) => {
+            const newState = [...prevState];
+            newState.push(letter?.value);
+            return newState;
+          });
         } else {
           letterStatus = "yellow";
           wordStatus.push("yellow");
+
+          setYellowLetters((prevState) => {
+            const newState = [...prevState];
+            newState.push(letter?.value);
+            return newState;
+          });
         }
       } else {
         letterStatus = "gray";
         wordStatus.push("gray");
+
+        setGrayLetters((prevState) => {
+          const newState = [...prevState];
+          newState.push(letter?.value);
+          return newState;
+        });
       }
 
       setGridLetters((prevState): Word[][] => {
@@ -114,30 +139,26 @@ function WordGrid() {
     const success = wordStatus.every((status) => status === "green");
 
     if (success) {
-      alert("adivinaste!");
+      setWinner(true);
     } else {
       setPositionX(0);
       setPositionY((prevState) => prevState + 1);
     }
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event: any) => {
-      if (event.key === "Enter") {
-        sendWord();
-      }
+  // useEffect(() => {
+  //   function handleKeyDown(event: any) {
+  //     if ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode === 13) {
+  //       updateLetters(event.key.toUpperCase());
+  //     }
+  //   }
 
-      if (event.keyCode >= 65 && event.keyCode <= 90) {
-        updateLetters(event.key.toUpperCase());
-      }
-    };
+  //   document.addEventListener("keydown", handleKeyDown);
 
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, []);
 
   return (
     <div className="grid">
@@ -153,9 +174,14 @@ function WordGrid() {
 
       <QwertyKeyboard
         deleteLetter={deleteLetter}
+        grayLetters={grayLetters}
+        greenLetters={greenLetters}
         sendWord={sendWord}
         updateLetters={updateLetters}
+        yellowLetters={yellowLetters}
       />
+
+      <WinnerModal openWinnerModal={winner} />
     </div>
   );
 }

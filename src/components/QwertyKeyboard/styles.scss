@@ -1,25 +1,42 @@
 .qwerty {
-  margin-top: 20px;
+  display: grid;
+  gap: 4px 7px;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 20px auto;
+  max-width: 620px;
 
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+  button {
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    margin-bottom: 4px;
 
-    button {
-      width: 55px;
-      height: 50px;
-      margin-bottom: 4px;
-      cursor: pointer;
+    &.backspace {
+      font-size: 1.3em;
 
-      &.backspace {
-        width: 65px;
+      svg {
+        margin-top: 4px;
       }
+    }
 
-      &.enter {
-        width: 104px;
-      }
+    &.enter {
+      grid-column: 9/-1;
+      grid-row: 3;
+      font-weight: 700;
+    }
+
+    &.gray {
+      background-color: #161414;
+    }
+
+    &.yellow {
+      background-color: #ebca71;
+      color: #000000;
+    }
+
+    &.green {
+      background-color: #92f081;
+      color: #000000;
     }
   }
 }
