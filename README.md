@@ -21,7 +21,7 @@
 
 ### Descripción
 
-Es un pequeño juego en el cual aparece un tablero de 5x6 en el cual cada vez que carga se preselecciona una palabra de 5 letras en español y la idea es adivinar esa palabra. Se tiene 6 posibilidades para adivinar la palabra, el juego consiste en que se debe escribir una palabra inicial y en base a esa, el juego le va a determinar si las letras utilizadas existen en la palabra que se tiene que adiviar o si existen pero están en una posición incorrecta o bien no existen en esa palabra. Si al cabo de 6 intentos no se adivinó la palabra, el juego se debe reiniciar. Si adivinó la palabra, un cartel de felicitaciones aparece para que pueda reiniciar el juego y volver a empezar con una palabra nueva.
+Es un pequeño juego que hay que adivinar una palabra de 5 letras en español. Se tiene 6 posibilidades, el jugador debe escribir una palabra inicial y se le va a indicar si las letras utilizadas existen en la palabra o si existen pero están en una posición incorrecta o bien no existen. Si adivina la palabra, un cartel de felicitaciones aparece para que pueda reiniciar el juego y volver a empezar con una palabra nueva.
 
 Este proyecto es el cuarto proyecto de una serie de proyectos con React.
 Fue desarrollado en vivo en el [stream](https://www.twitch.tv/codigodemarras).
@@ -45,7 +45,7 @@ La idea des estos proyectos es ir realizando proyectos que vayan incrementando s
 
 ### Description
 
-It is a small game in which a 5x6 board appears in which each time it loads a 5-letter word in Spanish is pre-selected and the idea is to guess that word. You have 6 possibilities to guess the word, the game consists of writing an initial word and based on that, the game will determine if the letters used exist in the word you have to guess or if they exist but are in an incorrect position or do not exist in that word. If after 6 attempts the word has not been guessed, the game must be restarted. If you guessed the word, a congratulations sign appears so you can restart the game and start over with a new word.
+It is a small game where you have to guess a word of 5 letters in Spanish. There are 6 possibilities, the player must write an initial word and it will be indicated if the letters used exist in the word or if they exist but are in an incorrect position or do not exist. If he/she guesses the word, a congratulations sign appears so that he/she can restart the game and start over with a new word.
 
 This project is the second project from a serie of projecs with React.
 It was developed live in the [stream](https://www.twitch.tv/codigodemarras).
