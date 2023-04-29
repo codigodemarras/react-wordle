@@ -4,7 +4,7 @@
 
 ### Init Project
 
-* Clone the projecto
+* Clone the project
 * Install dependencies
   ```
   pnpm install
@@ -17,12 +17,12 @@
 
 ### Description
 
-It is a small game where you have to guess a word of 5 letters in Spanish. There are 6 possibilities, the player must write an initial word and it will be indicated if the letters used exist in the word or if they exist but are in an incorrect position or do not exist. If he/she guesses the word, a congratulations sign appears so that he/she can restart the game and start over with a new word.
+It is a little game where you have to guess a word of 5 letters in Spanish. There are 6 possibilities, the player has to write an initial word and it will be indicated if the letters used are present in the word, if they are present but in the wrong position or if they are absent. If he/she guesses the word, a congratulations sign appears and he/she can restart the game and start again with a new word.
 
-This project is the second project from a serie of projecs with React.
+This project is the second in a series of projects using React.
 It was developed live in the [stream](https://www.twitch.tv/codigodemarras).
 
-The idea of these projects is to make projects of increasing difficulty, from a tic-tac-toe, through a memory game, a sudoku and adding more complexity one project at a time...
+The idea of these projects is to make projects of increasing difficulty, from a tic-tac-toe, to a memory game, to a sudoku, and adding more complexity one project at a time...
 
 ---
 
