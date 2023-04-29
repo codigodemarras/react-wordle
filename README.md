@@ -6,30 +6,6 @@
 
 ---
 
-### Iniciar Proyecto
-
-* Clonar el proyecto
-* Instalar dependencias
-  ```
-  pnpm install
-  ```
-* Levantar proyecto
-  ```
-  pnpm run dev
-  ```
-* Jugar
-
-### Descripción
-
-Es un pequeño juego que hay que adivinar una palabra de 5 letras en español. Se tiene 6 posibilidades, el jugador debe escribir una palabra inicial y se le va a indicar si las letras utilizadas existen en la palabra o si existen pero están en una posición incorrecta o bien no existen. Si adivina la palabra, un cartel de felicitaciones aparece para que pueda reiniciar el juego y volver a empezar con una palabra nueva.
-
-Este proyecto es el cuarto proyecto de una serie de proyectos con React.
-Fue desarrollado en vivo en el [stream](https://www.twitch.tv/codigodemarras).
-
-La idea des estos proyectos es ir realizando proyectos que vayan incrementando su dificultad, desde un tic-tac-toe, pasando por un memory game, un sudoku y agregando más complejidad proyecto a proyecto...
-
----
-
 ### Init Project
 
 * Clone the projecto
@@ -51,6 +27,30 @@ This project is the second project from a serie of projecs with React.
 It was developed live in the [stream](https://www.twitch.tv/codigodemarras).
 
 The idea of these projects is to make projects of increasing difficulty, from a tic-tac-toe, through a memory game, a sudoku and adding more complexity one project at a time...
+
+---
+
+### Iniciar Proyecto
+
+* Clonar el proyecto
+* Instalar dependencias
+  ```
+  pnpm install
+  ```
+* Levantar proyecto
+  ```
+  pnpm run dev
+  ```
+* Jugar
+
+### Descripción
+
+Es un pequeño juego que hay que adivinar una palabra de 5 letras en español. Se tiene 6 posibilidades, el jugador debe escribir una palabra inicial y se le va a indicar si las letras utilizadas existen en la palabra o si existen pero están en una posición incorrecta o bien no existen. Si adivina la palabra, un cartel de felicitaciones aparece para que pueda reiniciar el juego y volver a empezar con una palabra nueva.
+
+Este proyecto es el cuarto proyecto de una serie de proyectos con React.
+Fue desarrollado en vivo en el [stream](https://www.twitch.tv/codigodemarras).
+
+La idea des estos proyectos es ir realizando proyectos que vayan incrementando su dificultad, desde un tic-tac-toe, pasando por un memory game, un sudoku y agregando más complejidad proyecto a proyecto...
 
 ---
 
@@ -86,16 +86,13 @@ v18.16.0.
 ### Redes / Networks
 
 <div id="badges">
-  <a href="http://twitch.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/twitch-6441a5?style=for-the-badge&logo=twitch&logoColor=FFFFFF" alt="Website Badge"/>
+  <a href="https://walterradduso.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/website-8a0606?style=for-the-badge&logo=About.me&logoColor=FFFFFF" alt="Website Badge"/>
   </a>
-  <a href="http://twitter.codigodemarras.com/" target="_blanck">
+  <a href="https://linkedin.walterradduso.com/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=FFFFFF" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://twitter.com/walterradduso" target="_blank">
     <img src="https://img.shields.io/badge/twitter-00acee?style=for-the-badge&logo=twitter&logoColor=FFFFFF" alt="Website Badge"/>
-  </a>
-  <a href="http://youtube.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/youtube-c4302b?style=for-the-badge&logo=youtube&logoColor=FFFFFF" alt="Website Badge"/>
-  </a>
-  <a href="http://discord.codigodemarras.com/" target="_blanck">
-    <img src="https://img.shields.io/badge/discord-36393e?style=for-the-badge&logo=discord&logoColor=FFFFFF" alt="Website Badge"/>
   </a>
 </div>
