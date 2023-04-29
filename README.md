@@ -2,10 +2,6 @@
 
 ---
 
-### Wordle
-
----
-
 ### Init Project
 
 * Clone the projecto
@@ -83,7 +79,7 @@ v18.16.0.
 
 ---
 
-### Redes / Networks
+### Networks / Redes
 
 <div id="badges">
   <a href="https://walterradduso.dev/" target="_blank">
