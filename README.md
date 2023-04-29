@@ -4,12 +4,12 @@
 
 ### Init Project
 
-* Clone the project
+* Clone project
 * Install dependencies
   ```
   pnpm install
   ```
-* Start the project
+* Start project
   ```
   pnpm run dev
   ```
@@ -19,21 +19,16 @@
 
 It is a little game where you have to guess a word of 5 letters in Spanish. There are 6 possibilities, the player has to write an initial word and it will be indicated if the letters used are present in the word, if they are present but in the wrong position or if they are absent. If he/she guesses the word, a congratulations sign appears and he/she can restart the game and start again with a new word.
 
-This project is the second in a series of projects using React.
-It was developed live in the [stream](https://www.twitch.tv/codigodemarras).
-
-The idea of these projects is to make projects of increasing difficulty, from a tic-tac-toe, to a memory game, to a sudoku, and adding more complexity one project at a time...
-
 ---
 
 ### Iniciar Proyecto
 
-* Clonar el proyecto
+* Clonar proyecto
 * Instalar dependencias
   ```
   pnpm install
   ```
-* Levantar proyecto
+* Iniciar proyecto
   ```
   pnpm run dev
   ```
@@ -42,11 +37,6 @@ The idea of these projects is to make projects of increasing difficulty, from a 
 ### Descripción
 
 Es un pequeño juego que hay que adivinar una palabra de 5 letras en español. Se tiene 6 posibilidades, el jugador debe escribir una palabra inicial y se le va a indicar si las letras utilizadas existen en la palabra o si existen pero están en una posición incorrecta o bien no existen. Si adivina la palabra, un cartel de felicitaciones aparece para que pueda reiniciar el juego y volver a empezar con una palabra nueva.
-
-Este proyecto es el cuarto proyecto de una serie de proyectos con React.
-Fue desarrollado en vivo en el [stream](https://www.twitch.tv/codigodemarras).
-
-La idea des estos proyectos es ir realizando proyectos que vayan incrementando su dificultad, desde un tic-tac-toe, pasando por un memory game, un sudoku y agregando más complejidad proyecto a proyecto...
 
 ---
 
