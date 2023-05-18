@@ -1,10 +1,10 @@
-import { ReactElement } from "react";
-import { clsx } from "clsx";
+import { ReactElement } from 'react';
+import { clsx } from 'clsx';
+import { HiOutlineBackspace } from 'react-icons/hi';
 
-import { HiOutlineBackspace } from "react-icons/hi";
+import { KEYBOARD } from '../../constants';
 
-import "./styles.scss";
-import { KEYBOARD } from "../../constants";
+import './styles.scss';
 
 interface Props {
   deleteLetter: () => void;
@@ -30,8 +30,8 @@ function QwertyKeyboard({
           gray: grayLetters.includes(key),
           yellow: yellowLetters.includes(key),
           green: greenLetters.includes(key),
-          enter: key === "ENTER",
-          backspace: key === "HiOutlineBackspace",
+          enter: key === 'ENTER',
+          backspace: key === 'HiOutlineBackspace',
         });
 
         return (
@@ -39,18 +39,18 @@ function QwertyKeyboard({
             key={key}
             className={buttonStyles}
             onClick={() => {
-              if (key === "ENTER") {
+              if (key === 'ENTER') {
                 return sendWord();
               }
 
-              if (key === "HiOutlineBackspace") {
+              if (key === 'HiOutlineBackspace') {
                 return deleteLetter();
               }
 
               updateLetters(key);
             }}
           >
-            {key === "HiOutlineBackspace" ? <HiOutlineBackspace /> : key}
+            {key === 'HiOutlineBackspace' ? <HiOutlineBackspace /> : key}
           </button>
         );
       })}

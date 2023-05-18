@@ -1,1 +1,1 @@
-export { default as WinnerModal } from "./WinnerModal";
+export { default as WinnerModal } from './WinnerModal';

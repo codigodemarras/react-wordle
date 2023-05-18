@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from 'react';
 
-import "./styles.scss";
-import { QwertyKeyboard } from "../QwertyKeyboard";
-import { WORDS } from "../../constants";
-import { WinnerModal } from "../WinnerModal";
+import { QwertyKeyboard } from '../QwertyKeyboard';
+import { WinnerModal } from '../WinnerModal';
+import { WORDS } from '../../constants';
 
-type LetterStatus = "yellow" | "gray" | "green" | null;
+import './styles.scss';
+
+type LetterStatus = 'yellow' | 'gray' | 'green' | null;
 
 interface Word {
   value: string;
@@ -15,34 +16,34 @@ interface Word {
 function WordGrid() {
   const [gridLetters, setGridLetters] = useState<Word[][]>(() => [
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
     Array(5).fill({
-      value: "",
+      value: '',
       status: null,
     }),
   ]);
   const [positionX, setPositionX] = useState<number>(() => 0);
   const [positionY, setPositionY] = useState<number>(() => 0);
   const [wordOfTheDay] = useState<string[]>(() =>
-    WORDS[Math.floor(Math.random() * WORDS.length - 1)].split("")
+    WORDS[Math.floor(Math.random() * WORDS.length - 1)].split(''),
   );
   const [grayLetters, setGrayLetters] = useState<string[]>([]);
   const [yellowLetters, setYellowLetters] = useState<string[]>([]);
@@ -55,9 +56,7 @@ function WordGrid() {
     }
 
     setGridLetters((prevState): Word[][] => {
-      const newLetter: Word = { value, status: null };
-
-      prevState[positionY][positionX] = newLetter;
+      prevState[positionY][positionX] = { value, status: null };
 
       return [...prevState];
     });
@@ -73,7 +72,7 @@ function WordGrid() {
     setGridLetters((prevState): Word[][] => {
       const newState = [...prevState];
 
-      newState[positionY][positionX - 1].value = "";
+      newState[positionY][positionX - 1].value = '';
 
       return newState;
     });
@@ -97,37 +96,44 @@ function WordGrid() {
       if (letterExist !== -1) {
         // If the letter is equal
         if (letter?.value === wordOfTheDay[index]) {
-          letterStatus = "green";
-          wordStatus.push("green");
+          letterStatus = 'green';
+          wordStatus.push('green');
 
           setGreenLetters((prevState) => {
             const newState = [...prevState];
+
             newState.push(letter?.value);
+
             return newState;
           });
         } else {
-          letterStatus = "yellow";
-          wordStatus.push("yellow");
+          letterStatus = 'yellow';
+          wordStatus.push('yellow');
 
           setYellowLetters((prevState) => {
             const newState = [...prevState];
+
             newState.push(letter?.value);
+
             return newState;
           });
         }
       } else {
-        letterStatus = "gray";
-        wordStatus.push("gray");
+        letterStatus = 'gray';
+        wordStatus.push('gray');
 
         setGrayLetters((prevState) => {
           const newState = [...prevState];
+
           newState.push(letter?.value);
+
           return newState;
         });
       }
 
       setGridLetters((prevState): Word[][] => {
         const newLetterStatus = { ...prevState[positionY][index] };
+
         newLetterStatus.status = letterStatus;
 
         prevState[positionY][index] = newLetterStatus;
@@ -136,7 +142,7 @@ function WordGrid() {
       });
     });
 
-    const success = wordStatus.every((status) => status === "green");
+    const success = wordStatus.every((status) => status === 'green');
 
     if (success) {
       setWinner(true);
@@ -145,20 +151,6 @@ function WordGrid() {
       setPositionY((prevState) => prevState + 1);
     }
   };
-
-  // useEffect(() => {
-  //   function handleKeyDown(event: any) {
-  //     if ((event.keyCode >= 65 && event.keyCode <= 90) || event.keyCode === 13) {
-  //       updateLetters(event.key.toUpperCase());
-  //     }
-  //   }
-
-  //   document.addEventListener("keydown", handleKeyDown);
-
-  //   return () => {
-  //     document.removeEventListener("keydown", handleKeyDown);
-  //   };
-  // }, []);
 
   return (
     <div className="grid">

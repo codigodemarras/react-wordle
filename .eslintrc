@@ -33,7 +33,6 @@
     "react/jsx-uses-react": "off",
     "react/self-closing-comp": "warn",
     "react/react-in-jsx-scope": "off",
-    "quotes": "double",
     "prettier/prettier": [
       "error",
       {

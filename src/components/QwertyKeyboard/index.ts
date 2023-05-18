@@ -1,1 +1,1 @@
-export { default as QwertyKeyboard } from "./QwertyKeyboard";
+export { default as QwertyKeyboard } from './QwertyKeyboard';
